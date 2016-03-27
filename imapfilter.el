@@ -53,8 +53,13 @@
       (set-window-buffer win (current-buffer))
       (set-window-dedicated-p win t)
       (erase-buffer)
-      (apply #'call-process "imapfilter" nil (current-buffer) t
-             imapfilter-args))
+      (let ((default-process-coding-system
+              (cons (coding-system-change-eol-conversion
+                     (car default-process-coding-system) 'dos)
+                    (coding-system-change-eol-conversion
+                     (cdr default-process-coding-system) 'dos))))
+        (apply #'call-process "imapfilter" nil (current-buffer) t
+               imapfilter-args)))
     (set-window-configuration winconf))
   (message "Running imapfilter...done"))
 
