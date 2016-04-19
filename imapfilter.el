@@ -27,8 +27,6 @@
 
 ;;; Code:
 
-(require 'cl-lib)
-
 (defgroup imapfilter nil
   "Run the `imapfilter' executable."
   :group 'mail)
