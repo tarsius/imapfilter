@@ -37,8 +37,14 @@
   (when (require 'mu4e nil t)
     (add-hook 'mu4e-update-pre-hook 'imapfilter)))
 
-(defvar imapfilter-args '("-v")
-  "The arguments for the `imapfilter' executable.")
+(defgroup imapfilter nil
+  "Run the `imapfilter' executable."
+  :group 'mail)
+
+(defcustom imapfilter-args '("-v")
+  "The arguments for the `imapfilter' executable."
+  :group 'imapfilter
+  :type '(repeat string))
 
 (defun imapfilter ()
   "Run the `imapfilter' executable."
