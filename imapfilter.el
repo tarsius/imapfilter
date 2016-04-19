@@ -1,10 +1,10 @@
 ;;; imapfilter.el --- run the imapfilter executable
 
-;; Copyright (C) 2015  Jonas Bernoulli
+;; Copyright (C) 2015-2016  Jonas Bernoulli
 
 ;; Author: Jonas Bernoulli <jonas@bernoul.li>
 ;; Homepage: http://github.com/tarsius/imapfilter
-;; Keywords: convenience
+;; Keywords: mail
 
 ;; This file is not part of GNU Emacs.
 
