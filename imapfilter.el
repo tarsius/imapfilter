@@ -23,19 +23,11 @@
 
 ;;; Commentary:
 
-;; Run the `imapfilter' executable.
-
-;; Loading this library automatically loads `mu4e' if present and
-;; then adds the `imapfilter' function to `mu4e-update-pre-hook'.
-;; But this library can also be used without `mu4e'.
+;; Run the `imapfilter' executable, showing progress in a buffer.
 
 ;;; Code:
 
 (require 'cl-lib)
-
-(cl-eval-when (load eval)
-  (when (require 'mu4e nil t)
-    (add-hook 'mu4e-update-pre-hook 'imapfilter)))
 
 (defgroup imapfilter nil
   "Run the `imapfilter' executable."
