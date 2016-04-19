@@ -1,4 +1,4 @@
-;;; imapfilter.el --- run the imapfilter executable
+;;; imapfilter.el --- run the imapfilter executable  -*- lexical-binding: t -*-
 
 ;; Copyright (C) 2015-2016  Jonas Bernoulli
 
