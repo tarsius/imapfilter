@@ -46,6 +46,11 @@
   :group 'imapfilter
   :type '(repeat string))
 
+(defcustom imapfilter-update-buffer-height 8
+  "Height of the `imapfile' update buffer."
+  :group 'imapfilter
+  :type 'integer)
+
 (defun imapfilter ()
   "Run the `imapfilter' executable."
   (interactive)
@@ -54,7 +59,7 @@
         (win (split-window
               (frame-root-window)
               (- (window-height (frame-root-window))
-                 (or (bound-and-true-p mu4e~update-buffer-height) 8)))))
+                 imapfilter-update-buffer-height))))
     (with-current-buffer (get-buffer-create " *imapfilter*")
       (set-window-buffer win (current-buffer))
       (set-window-dedicated-p win t)
