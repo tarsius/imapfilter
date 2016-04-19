@@ -43,6 +43,7 @@
   :group 'imapfilter
   :type 'integer)
 
+;;;###autoload
 (defun imapfilter ()
   "Run the `imapfilter' executable."
   (interactive)
